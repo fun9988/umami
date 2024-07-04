@@ -208,6 +208,7 @@ export interface RealtimeData {
 
 export interface SessionData {
   id: string;
+  ip: string;
   websiteId: string;
   visitId: string;
   hostname: string;
