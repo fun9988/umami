@@ -6,6 +6,7 @@ CREATE TABLE umami.website_event
     visit_id UUID,
     event_id UUID,
     --sessions
+    ip LowCardinality(String),
     hostname LowCardinality(String),
     browser LowCardinality(String),
     os LowCardinality(String),
@@ -39,6 +40,7 @@ CREATE TABLE umami.website_event_queue (
     visit_id UUID,
     event_id UUID,
     --sessions
+    ip LowCardinality(String),
     hostname LowCardinality(String),
     browser LowCardinality(String),
     os LowCardinality(String),
@@ -78,6 +80,7 @@ SELECT website_id,
     session_id,
     visit_id,
     event_id,
+    ip,
     hostname,
     browser,
     os,
