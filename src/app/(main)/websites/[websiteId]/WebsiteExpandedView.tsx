@@ -16,6 +16,7 @@ import SideNav from 'components/layout/SideNav';
 import { useNavigation, useMessages, useLocale } from 'components/hooks';
 import LinkButton from 'components/common/LinkButton';
 import styles from './WebsiteExpandedView.module.css';
+import IpTable from 'components/metrics/IpTable';
 
 const views = {
   url: PagesTable,
@@ -34,6 +35,7 @@ const views = {
   language: LanguagesTable,
   event: EventsTable,
   query: QueryParametersTable,
+  ip: IpTable,
 };
 
 export default function WebsiteExpandedView({
@@ -116,6 +118,11 @@ export default function WebsiteExpandedView({
       key: 'host',
       label: formatMessage(labels.hosts),
       url: renderUrl({ view: 'host' }),
+    },
+    {
+      key: 'ip',
+      label: formatMessage(labels.ip),
+      url: renderUrl({ view: 'ip' }),
     },
   ];
 
